@@ -5,7 +5,7 @@ module.exports = {
      console.log(req.body)
      if(!req.body.username) return res.sendStatus(400)
      if(!req.body.password) return res.sendStatus(400)
-        const result = await daoUser.add(req.body.username, req.body.password)
+        const result = await daoUser.add(req.body)
         res.status(result.code)
         res.send(result)
    },

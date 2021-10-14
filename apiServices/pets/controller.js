@@ -1,7 +1,12 @@
+const daoPets = require('./daoPets')
 module.exports = {
-   getPets(req, res){
-      let dato = 5
-      let resultado = 3 + dato
-      return res.send({resultado})
+   async createPet(req, res){
+      const result = await daoPets.add(req.body)    
+      res.status(result.code)
+      res.send(result)
+   },
+   async getPet(req, res){
+      const result = await daoPets.get()
+      res('ok')
    }
 }
