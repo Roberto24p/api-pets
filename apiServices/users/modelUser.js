@@ -7,26 +7,13 @@ const userSchema = new Schema({
       required: true
    },
    password: String,
-   date: {
-      type: Date,
-      default: new Date()
-   },
    email: {
       type: String
    },
-   dateBorn: {
-      type: Date
-   },
-   about: {
-      type: String
-   },
-   city: {
-      type: String
-   },
-   pets: [{
+   profile: {
       type: Schema.ObjectId,
-      ref: 'Pet'
-   }]
+      ref: 'Profile'
+   }
 }    
 )
 

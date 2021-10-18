@@ -8,9 +8,10 @@ const petsSchema = new Schema({
    dateBorn: Date,
    city: String,
    description: String,
+   adoption: Boolean,
    owner: {
       type: Schema.ObjectId,
-      ref: 'user'
+      ref: 'Profile'
    }
 })
 

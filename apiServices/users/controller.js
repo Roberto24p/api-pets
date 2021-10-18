@@ -9,8 +9,9 @@ module.exports = {
         res.status(result.code)
         res.send(result)
    },
-   async getUser(req, res){
-
+   async getAll(req, res){
+      const result = await daoUser.getAll()
+      res.send(result)
    }
 
 }

@@ -3,6 +3,6 @@ const controller = require('./controller')
 const router = Router()
 
 router.post('/', controller.createPet)
-router.get('/', controller.getPet)
+router.get('/', controller.getPetAdoption)
 
 module.exports = router

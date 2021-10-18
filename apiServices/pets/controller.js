@@ -5,8 +5,8 @@ module.exports = {
       res.status(result.code)
       res.send(result)
    },
-   async getPet(req, res){
-      const result = await daoPets.get()
-      res('ok')
+   async getPetAdoption(req, res){
+      const result = await daoPets.getPetAdoption()
+      res.send(result)
    }
 }

@@ -1,6 +1,6 @@
 require('../../mongoDb/index')
 const petModel = require('./modelPets')
-const modelUser = require('../users/modelUser')
+const Profile = require('../profiles/modelProfiles')
 
 module.exports = {
    async add(bodyPet){
@@ -11,17 +11,28 @@ module.exports = {
                name: bodyPet.name, 
                dateBorn: bodyPet.dateBorn, 
                city: bodyPet.city,
-               description: bodyPet.description
+               description: bodyPet.description,
+               adoption: bodyPet.adoption
             })
             await pet.save()
-            const user = await modelUser.findById(bodyPet.user)
-            user.pets = user.pets.concat(pet._id)
-            await user.save()
+            const profile = await Profile.findById(bodyPet.user)
+            profile.pets = profile.pets.concat(pet._id)
+            await profile.save()
             return resolve( {code:200, err: null} )
          }catch(e){
             console.log(e)
             reject( {code: 400, err: e} )
          }
       })
+   },
+   async getPetAdoption(){
+      return new Promise(async (resolve, reject)=>{
+         try{
+            const result = await petModel.find({ adoption:'true' }).populate('owner')
+            return resolve(result)
+         }catch(e){
+            reject(e)
+         }
+      }) 
    }
 }
