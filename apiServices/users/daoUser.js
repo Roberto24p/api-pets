@@ -1,5 +1,5 @@
 require('../../mongoDb/index')
-const userModel = require('./modelUser')
+const User = require('./modelUser')
 const Profile = require('../profiles/modelProfiles')
 module.exports = {
    async add(bodyUser){
@@ -13,7 +13,7 @@ module.exports = {
                
             })
             await profile.save()
-            const user = new userModel({ username: bodyUser.username, 
+            const user = new User({ username: bodyUser.username, 
                password: bodyUser.password,
                email: bodyUser.pass,
                profile: profile._id
@@ -29,7 +29,7 @@ module.exports = {
    async getAll(){
       return new Promise( async (resolve, reject)=>{
          try{
-            const users = userModel.find({})
+            const users = User.find({})
             console.log(users)
             return resolve(users)
          }catch(e){

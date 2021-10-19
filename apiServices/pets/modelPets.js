@@ -12,7 +12,14 @@ const petsSchema = new Schema({
    owner: {
       type: Schema.ObjectId,
       ref: 'Profile'
-   }
+   },
+   oldOwner: {
+      type: Schema.ObjectId,
+      ref: 'Profile'
+   },
+   pictures: [{
+      type: String
+   }]
 })
 
 module.exports = new model('Pet', petsSchema)
