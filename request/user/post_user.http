@@ -1,0 +1,12 @@
+POST http://localhost:8080/users 
+content-type: application/json
+
+{
+    "username": "Joel",
+    "password": "1234",
+    "email": "julio123@gmail.com",
+    "names": "Joelito",
+    "date": "",
+    "about": "fULL FUTBOL xd",
+    "city": "Guayaquil"
+}
