@@ -2,10 +2,10 @@ POST http://localhost:8080/pets
 content-type: application/json
 
 {
-    "user": "6171bb7056d6c83b321f469b",
-    "name": "Nina",
+    "user": "6171be69b59eaf42bf8520d3",
+    "name": "Negro",
     "dateBorn": "2018-01-21T18:20:56.304Z",
-    "city": "Duran",
-    "description": "Es negrita, es dulce, bonita"
-    //"adoption": "false"
+    "city": "Pajan",
+    "description": "Es negrito, es dulce, bonita",
+    "adoption": "true"
 }

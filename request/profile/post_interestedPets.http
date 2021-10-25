@@ -1,7 +1,7 @@
-POST http://localhost:8080/pets/interested 
+POST http://localhost:8080/profiles/interested 
 content-type: application/json
 
 {
     "id": "6171bb7056d6c83b321f469b",
-    "pet": "Nina",
+    "pet": "6171b53f56d6c83b321f468f"
 }

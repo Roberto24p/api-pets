@@ -28,7 +28,8 @@ module.exports = {
             reject(e)
          }
       } )
-   },
+   }
+   ,
    async addInterested(body){
         return new Promise(async (resolve, reject)=>{
             try{

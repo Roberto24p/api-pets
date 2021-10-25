@@ -1,0 +1,10 @@
+POST http://localhost:8080/messages 
+content-type: application/json
+
+{
+    "from": "6171bb7056d6c83b321f469b",
+    "to": "6171be69b59eaf42bf8520d3",
+    "message": "Estoy interesada en el perrito",
+    "pet": "6176e48718c63df8efa1a315"
+    
+}

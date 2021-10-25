@@ -16,7 +16,6 @@ module.exports = {
             })
             await pet.save()
             const profile = await Profile.findById(bodyPet.user)
-            console.log(profile)
             profile.pets = profile.pets.concat(pet._id)
             await profile.save()
             return resolve( {code:200, err: null} )
