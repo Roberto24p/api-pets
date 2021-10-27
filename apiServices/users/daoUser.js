@@ -20,10 +20,10 @@ module.exports = {
             await user.save()
             await profile.save()
             
-            return resolve( {code: 200, err: null} )
+            return resolve()
          }catch(e){
             console.log(e)
-            return reject( {code:400, err: e} )
+            return reject( e )
          }
       })
    },

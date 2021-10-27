@@ -1,19 +1,22 @@
 const daoProfile = require('./daoProfile')
 
 module.exports = {
-   async createUser(req, res){
-     console.log(req.body)
-        const result = await daoProfile.add(req.body)
-        res.status(result.code)
-        res.send(result)
+   async getAll(req, res, next){
+      try{
+         const result = await daoProfile.getAll()
+         res.send(result)
+      }catch(e){
+         next(e)
+      }
    },
-   async getAll(req, res){
-      const result = await daoProfile.getAll()
-      res.send(result)
-   },
-   async interested(req, res){
-       const result = await daoProfile.addInterested(req.body)
-       res.send(result)
+   async interested(req, res, next){
+      const {pet , id} = req.body
+      if( pet=="" ||id=="" )return res.status(400).json( {message: "Datos incompletos"} ) 
+      try{
+         await daoProfile.addInterested(req.body)
+         res.sendStatus(201)  
+      }catch(e){
+         next(e)
+      }
    }
-
 }

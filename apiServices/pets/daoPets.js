@@ -18,10 +18,10 @@ module.exports = {
             const profile = await Profile.findById(bodyPet.user)
             profile.pets = profile.pets.concat(pet._id)
             await profile.save()
-            return resolve( {code:200, err: null} )
+            return resolve()
          }catch(e){
             console.log(e)
-            reject( {code: 400, err: e} )
+            return reject(e)
          }
       })
    },
@@ -31,7 +31,8 @@ module.exports = {
             const result = await Pet.find({ adoption:'true' }).populate('owner')
             return resolve(result)
          }catch(e){
-            reject(e)
+            console.log(e)
+            return reject(e)
          }
       }) 
    }
