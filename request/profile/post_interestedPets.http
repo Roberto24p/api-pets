@@ -1,0 +1,7 @@
+POST http://localhost:8090/profiles/interested 
+content-type: application/json
+
+{
+    "id": "6171bb7056d6c83b321f469b",
+    "pet": "6171b53f56d6c83b321f468f"
+}
