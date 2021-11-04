@@ -18,5 +18,17 @@ module.exports = {
       }catch(e){
          next(e)
       }
+   },
+   async getById(req,res, next){
+      const { profile } = req.params
+      console.log(profile)
+      if(profile == '') return res.status(400).json( {message: 'Datos incompletos'} )
+      try{
+         const profileR = await daoProfile.getById(profile)
+         res.status(200).json( {message: profileR} )
+      }catch(e){
+         console.log(e)
+         next(e)
+      }
    }
 }

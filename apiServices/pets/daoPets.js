@@ -12,7 +12,8 @@ module.exports = {
                dateBorn: bodyPet.dateBorn, 
                city: bodyPet.city,
                description: bodyPet.description,
-               adoption: bodyPet.adoption
+               adoption: bodyPet.adoption,
+               pictures: bodyPet.pictures
             })
             await pet.save()
             const profile = await Profile.findById(bodyPet.user)

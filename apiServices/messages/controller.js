@@ -18,7 +18,7 @@ module.exports = {
             return res.satus(400).json( { message: "Error, no hay id de mensaje"} )
         }
         try{
-        const data = await daoMessage.getById(id)
+            const data = await daoMessage.getById(id)
             if(!data) res.sendStatus(404)
             res.status(200).json({data: data})
         }catch(e){

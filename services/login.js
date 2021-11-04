@@ -1,4 +1,4 @@
-require('../mongoDb/index')
+    require('../mongoDb/index')
 const jwt = require('jsonwebtoken')
 const User = require('../apiServices/users/modelUser')
 const login = async (req, res)=>{

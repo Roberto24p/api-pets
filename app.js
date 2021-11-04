@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = require('./routes')
+const cors = require('cors');
 const { error404Handler, errorHandler } = require('./middleware/error'); 
 const app = express()
 app.use((req, res, next) => {
@@ -9,6 +10,9 @@ app.use((req, res, next) => {
    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
    next();
 });
+app.use(cors({
+   origin: 'http://localhost:8080'
+}));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use('/', routes)

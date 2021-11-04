@@ -25,5 +25,16 @@ module.exports = {
                 return reject(e)
             }
         })
+   },
+   async getById(id){
+      return new Promise(async (resolve, reject)=>{
+         try{
+            const profile = await Profile.findById(id).populate('pets')
+            return resolve(profile)
+         }catch(e){
+            console.log(e)
+            return reject(e)
+         }
+      })
    }
 }

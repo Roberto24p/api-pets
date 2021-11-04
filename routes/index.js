@@ -7,7 +7,7 @@ const login = require('../services/login')
 const middleware = require('../middleware/auth')
 const router = express.Router()
 
-router.use('/login', middleware, login)
+router.use('/login', login)
 router.use('/pets', pets)
 router.use('/users', users)
 router.use('/profiles', profiles)
