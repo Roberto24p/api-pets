@@ -10,6 +10,7 @@ const login = async (req, res)=>{
         res.send({error: "Usuario o password incorrectas"})
     }
     const token = jwt.sign({username: user.username, profile: user.profile}, '123456789')
+
     res.send({
         name: user.username,
         user: user.profile,

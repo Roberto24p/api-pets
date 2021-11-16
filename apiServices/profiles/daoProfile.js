@@ -36,5 +36,19 @@ module.exports = {
             return reject(e)
          }
       })
+   },
+   async putProfile(profile){
+      return new Promise(async (resolve, reject)=>{
+         try{
+     
+            Profile.findByIdAndUpdate(profile.profile, profile, (err, update)=>{
+               if(err) reject(err)
+               else {
+                  resolve(update)}
+            })
+         }catch(e){
+            reject(e)
+         }
+      })
    }
 }

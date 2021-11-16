@@ -1,6 +1,7 @@
 const express = require('express')
 const routes = require('./routes')
 const cors = require('cors');
+const dotenv = require('dotenv').config();
 const { error404Handler, errorHandler } = require('./middleware/error'); 
 const app = express()
 app.use((req, res, next) => {
@@ -11,7 +12,7 @@ app.use((req, res, next) => {
    next();
 });
 app.use(cors({
-   origin: 'http://localhost:8080'
+   origin: 'http://192.168.100.6:8080'
 }));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
@@ -19,6 +20,6 @@ app.use('/', routes)
 app.use(errorHandler);
 
 
-app.listen(8090, function(){
-   console.log("listen at 8090")
+app.listen(process.env.PORT, function(){
+   console.log("listen at " + process.env.PORT)
 })

@@ -23,7 +23,8 @@ const profileSchema = new Schema({
     interestedPets: [{
        type: Schema.ObjectId,
        ref: 'Pet'
-    }]
+    }],
+    avatar: String
  } 
 )
 
