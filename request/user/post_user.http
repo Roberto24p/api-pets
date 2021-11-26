@@ -3,10 +3,10 @@ content-type: application/json
 
 {
     "username": "",
-    "password": "1234",
-    "email": "julio123@gmail.com",
-    "names": "davee",
+    "password": "",
+    "email": "",
+    "names": "",
     "date": "",
-    "about": "fULL FUTBOL xd",
-    "city": "Guayaquil"
+    "about": "",
+    "city": ""
 }
