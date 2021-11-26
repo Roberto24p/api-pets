@@ -57,7 +57,7 @@ Recibe en el body los datos de una mascota y entre ellos el id del usuario que l
 Permite la autenticación del usuario. Este regresa un token de acceso que es necesario para las rutas protegidas del api.
 ```json
 {
-     "username": "user123",
+    "username": "user123",
     "password": "123"
 }
 ```
