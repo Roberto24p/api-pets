@@ -2,9 +2,9 @@ PUT http://localhost:8090/profiles HTTP/1.1
 Content-Type: application/json
 
 {
-    "names": "Pochi",
-    "about": "FULL musica",
-    "city": "Pajan",
-    "_id": "6171be69b59eaf42bf8520d3"
+    "names": "",
+    "about": "",
+    "city": "",
+    "_id": ""
 }
 ###
