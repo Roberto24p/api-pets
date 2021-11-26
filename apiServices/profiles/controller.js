@@ -35,6 +35,7 @@ module.exports = {
       const { profile } = req.body
       if(profile==null) return res.status(400).json( {message: 'Datos Incompletos'})
       try{
+         console.log(profile)
          const profileR = await daoProfile.putProfile(req.body)
          res.status(200).json( {message: "Actualizado con exito"})
       }catch(e){

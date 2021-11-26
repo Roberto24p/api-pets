@@ -9,6 +9,7 @@ module.exports = {
          const result = await daoUser.add(req.body)
          res.sendStatus(201)
       }catch(e){
+         console.log(e)
          next(e)
       }
    },

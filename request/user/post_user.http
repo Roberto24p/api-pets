@@ -2,10 +2,10 @@ POST http://localhost:8090/users
 content-type: application/json
 
 {
-    "username": "",
+    "username": "suaseneguer",
     "password": "1234",
     "email": "julio123@gmail.com",
-    "names": "davee",
+    "names": "julio",
     "date": "",
     "about": "fULL FUTBOL xd",
     "city": "Guayaquil"

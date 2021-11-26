@@ -11,7 +11,5 @@ router.use('/login', login)
 router.use('/pets', pets)
 router.use('/users', users)
 router.use('/profiles', middleware, profiles)
-router.use('/messages', messages, function(req, res){
-    res.send({message: "error xd"})
-})
+router.use('/messages', messages)
 module.exports = router
