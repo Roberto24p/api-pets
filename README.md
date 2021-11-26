@@ -12,13 +12,13 @@ instalan de forma automática.
 Crea un nuevo usuario en la base de datos. Recibe en formato json varios datos, username es obligatorios, ejemplo:
 ```json
 {
-    "username": "", 
-    "password": "", 
-    "email": "",
-    "names": "",
+    "username": "user123", 
+    "password": "123", 
+    "email": "user123@test.com",
+    "names": "user",
     "date": "",
-    "about": "",
-    "city": ""
+    "about": "Lorem ...",
+    "city": "Quito"
 }
 ```
 ## Profile
@@ -41,12 +41,12 @@ Recibe como parámetro el id de un perfil de un usuario y retorna los datos del 
 Recibe en el body los datos de una mascota y entre ellos el id del usuario que lo sube (dueño).
 ```json
 {
-    "user": "",
-    "name": "",
+    "user": "id",
+    "name": "Bola de Pelos",
     "dateBorn": "",
-    "city": "",
-    "description": "",
-    "adoption": "",
+    "city": "Quito",
+    "description": "Blanco, grande, come mucho...",
+    "adoption": "true",
     "pictures":""
 }
 ```
@@ -57,8 +57,8 @@ Recibe en el body los datos de una mascota y entre ellos el id del usuario que l
 Permite la autenticación del usuario. Este regresa un token de acceso que es necesario para las rutas protegidas del api.
 ```json
 {
-     "username": "Joel",
-    "password": "1234"
+     "username": "user123",
+    "password": "123"
 }
 ```
 
