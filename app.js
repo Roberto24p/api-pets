@@ -2,7 +2,7 @@ const express = require('express')
 const routes = require('./routes')
 const cors = require('cors');
 const dotenv = require('dotenv').config();
-const { error404Handler, errorHandler } = require('./middleware/error'); 
+const {  errorHandler } = require('./middleware/error'); 
 const app = express()
 app.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*');
